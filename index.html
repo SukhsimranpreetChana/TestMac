@@ -1,0 +1,29 @@
+<TYPE html>
+    <html>
+        <body>
+            <title>My Website</title>
+            
+            <blockquote>"I am not at the Hammer Hacks today"</blockquote>
+            <button onclick = "changeQuote()"> Click me!</button>
+
+            <script>
+                var index = 0;
+                function changeQuote()
+                {
+                    var quote = [
+                        `"I am at the Hackathon..." - me`,
+                        `"I am enjoying the hammerhack." - me`,
+                        `"I am having fun at the hammerhack!" - me`
+                    ];
+
+                    var blockquote = document.querySelector("blockquote");
+                    blockquote.innerHTML = quote[index];
+
+                    index++;
+                    if(index > 2){
+                        index = 0;
+                    }
+                }
+            </script>
+        </body>
+    </html>
